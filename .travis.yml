@@ -27,11 +27,8 @@ before_install:
     fi
 
 install:
-  # beheve is a dev dependeny, so not in requirements.txt.
-  - pip install behave
+  - pip install -r test-requirements.txt
   - pip install -r ./requirements.txt
-  # codecov is a code coverage tool.
-  - pip install codecov
   - cd ./vscode-client
   - npm install
   - mkdir ./out
